@@ -116,8 +116,9 @@
     <!-- 计时器 -->
     <script>
         function timer() {
-            var start = new Date(2021, 07, 10, 06, 09, 06); //原作者有bug，日期为2020.02.15
-            var t = new Date() - start;
+            var start = new Date(2021, 6, 10, 6, 9, 6);
+            // var start = new Date("2021-7-10 06:09:06"); 
+            var t = new Date().getTime() - start;//原作者有bug，需添加.getTime();
             var h = ~~(t / 1000 / 60 / 60 % 24);
             if (h < 10) {
                 h = "0" + h;
